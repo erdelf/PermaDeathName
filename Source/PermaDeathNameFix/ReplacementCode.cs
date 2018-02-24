@@ -40,7 +40,7 @@ namespace PermaDeathNameFix
                         if (info.permadeathModeUniqueName != (Faction.OfPlayer.Name) + " (Permadeath)")
                         {
                             Current.Game.Info.permadeathModeUniqueName = Faction.OfPlayer.Name + " (Permadeath)";
-                            Log.Warning("Faction's name has changed and doesn't match save name. Fixing...");
+                            //Log.Warning("Faction's name has changed and doesn't match save name. Fixing...");
                             foreach (FileInfo current in GenFilePaths.AllSavedGameFiles)
                                 if (current.Name.Substring(0, current.Name.LastIndexOf('.')).Equals(filename))
                                     current.MoveTo(current.Directory.FullName + "\\" + info.permadeathModeUniqueName + current.Extension);
